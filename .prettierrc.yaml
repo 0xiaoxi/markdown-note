@@ -1,4 +1,24 @@
-singleQuote: true
-semi: false
-printWidth: 100
-trailingComma: none
+singleQuote: true # 使用单引号
+semi: false # 语句结尾不加分号
+trailingComma: 'all' # 尽可能在末尾添加逗号（如对象、数组的最后一个元素）
+printWidth: 100 # 每行代码不超过100个字符
+tabWidth: 2 # 缩进使用2个空格
+useTabs: false # 不使用Tab，用空格缩进
+bracketSpacing: true # 对象大括号{ }内部有空格，如 { foo: bar }
+arrowParens: 'avoid' # 箭头函数单个参数时不加括号，如 x => x
+vueIndentScriptAndStyle: true # Vue文件中的<script>和<style>标签内容缩进
+endOfLine: 'lf' # 换行符使用LF（对于Linux/macOS和现代Windows开发是推荐的）
+
+# React/JSX 特定配置
+jsxBracketSameLine: false
+jsxSingleQuote: true
+
+# 覆盖特定文件的配置
+overrides:
+  - files: '*.{json,yml,yaml}'
+    options:
+      singleQuote: false
+  - files: '*.md'
+    options:
+      printWidth: 80
+      proseWrap: 'always'
